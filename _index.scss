@@ -1,0 +1,78 @@
+@import 'vars';
+@import 'main';
+
+.container_index {
+    display: flex;
+}
+
+.personal {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 30%;
+    border-right: 1px solid $siteColor;
+    &__name {
+        padding: 20px 0 20px;
+        font-family: Lato;
+        font-weight: 700;
+        font-size:x-large;
+        color: darkgreen;
+    }
+    & h5 {
+        padding: 20px 0 20px;
+        font-family: Lato;
+        font-weight: 700;
+        font-size:medium;
+        color: darkgreen;
+    }
+
+    &__section:not(:last-child) {
+        border-bottom: 1px solid $siteColor;
+    }
+
+}
+
+.personal img {
+    margin-bottom: 20px;
+}
+
+.experience {
+    display: flex;
+    flex: 1;
+}
+
+.personal-box {
+    padding: 10px;
+    border-bottom: 1px solid $siteColor;
+    border-top: 1px solid $siteColor;
+
+    &__item {
+        display: flex;
+        justify-content: start;
+        gap: 15px;
+        align-items: center;
+        @extend %lato_700_14;
+        color:darkred;
+    }
+
+    &__item_info {
+        margin: 0 0 20px 50px;
+        @extend %lato_400_15;
+        color: $siteColor;
+    }
+    &__item-pad {
+        padding-left: 50px;
+    }
+}
+
+.experience {
+    &__header {
+        padding: 20px 0 20px;
+        border-bottom: 1px solid $siteColor;
+        font-family: Lato;
+        font-weight: 700;
+        font-size:xx-large;
+        color: darkgreen;
+    }
+}
+

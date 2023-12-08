@@ -1,0 +1,43 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+%lato_700_14 {
+    font-family: Lato;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+%lato_400_15 {
+    font-family: Lato;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+
+%lato_400_14 {
+    font-family: Lato;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+  }
+
+
+footer {
+    flex-shrink: 0;
+}

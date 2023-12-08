@@ -1,68 +1,57 @@
-
-* {
-    padding: 0;
-    margin: 0;
-}
-
-%lato_700_14 {
-    font-family: Lato;
-    font-weight: 700;
-    font-size: 17px;
-}
-
-%lato_400_15 {
-    font-family: Lato;
-    font-weight: 400;
-    font-size: 15px;
-}
-
-
-%lato_400_14 {
-    font-family: Lato;
-    font-weight: 400;
-    font-size: 13px;
-}
-
-body {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-main {
-    flex-grow: 1;
-  }
+@import 'main';
+@import 'vars';
+@import 'index';
 
 .center {
     display: flex;
     padding: 0 calc(50% - 500px);
 }
 
+.header-top {
+    background-color: $siteColor;
+}
+
+.header-top-box__lnk {
+    color: #fff;
+    @extend %lato_400_15;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.header-top-box__lnk:not(:last-child):after {
+    content: "\007C";
+    margin: 0 10px;
+}
+
 .header {
     @extend %lato_700_14;
-    background-color: #2070b2;
+    background-color: $siteColor;
     color: #fff;
 }
 
-
 .container {
-    padding: 20px;
+    padding: 10px;
     width: 100%;
 }
 
-
 .container_advanced {
-    border-left: 1px solid #2070b2;
-    border-right: 1px solid #2070b2;
+    border-left: 1px solid $siteColor;
+    border-right: 1px solid $siteColor;
     -webkit-box-shadow: 0px 0px 16px 8px rgba(32, 112, 178, 0.2);
     -moz-box-shadow: 0px 0px 16px 8px rgba(32, 112, 178, 0.2);
     box-shadow: 0px 0px 16px 8px rgba(170, 202, 228, 0.2);
 }
 
+.header-top-box {
+    display: flex;
+    justify-content: start;
+}
+
 .header-box {
     display: flex;
     justify-content: space-between;
+    height: 30px;
 }
 
 .header-box__input, .header-box_button {
@@ -83,29 +72,24 @@ main {
 }
 
 .header-box_button:hover {
-    cursor: pointer;
-    background-color: #2070b2;
+cursor: pointer;
+background-color: $siteColor;
 }
 
 .header-box_button:hover span {
-    color: #fff;
+color: #fff;
 }
 
 .main-header {
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-    @extend %lato_400_15;
-    border-bottom: 1px solid #2070b2;
-    color: #2070b2;
+padding-bottom: 10px;
+margin-bottom: 20px;
+@extend %lato_400_15;
+border-bottom: 1px solid #2070b2;
+color: #2070b2;
 }
 
 .message-box p {
-    padding: 5px 0;
-    @extend %lato_400_14;
-    color: #45535e;
+padding: 5px 0;
+@extend %lato_400_14;
+color: #45535e;
 }
-
-footer {
-    flex-shrink: 0;
-  }
-
